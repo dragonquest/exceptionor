@@ -143,7 +143,7 @@ Sorry, your age is not valid: Too old
 even if this gives you a nice summary you still can access each Exception individually by iterating over the List<Exception> returned by GetException().
 
 
-## Important details
+## Remarks 
 #### Why ```dynamic``` was used:
 
 The ExceptionOr\<T\> is fully type safe but the ```dynamic``` was needed for the Safe.Wrapper(...) only in order to proxy the methods and intercept the Exceptions (if any occur). 
