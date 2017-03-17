@@ -148,7 +148,9 @@ even if this gives you a nice summary you still can access each Exception indivi
 
 The ExceptionOr\<T\> is fully type safe but the ```dynamic``` was needed for the Safe.Wrapper(...) only in order to proxy the methods and intercept the Exceptions (if any occur). 
 
-The other options would have been to declare all methods ```virtual``` or make all class inherit from ```MarshalByRefObject```. I personally found this rather ugly.
+The other options would have been to declare all methods ```virtual``` or make all `class`es inherit from ```MarshalByRefObject```. I personally have found this solution rather ugly and not practical.
+
+On the other hand, the compiler will still warn you if you use the wrong return type in the method of the original class (since that one should be fully type safe). So it could be argued about impact of this downside. Assuming that you should test your code using unit tests (or less preferably: manually) anyway! 
 
 Since I wanted to make the library easy to use I decided to implement it the ```dynamic```-way.
 
@@ -163,9 +165,9 @@ I was mainly coding this library in order to learn more about the C# programming
 This library is still in early alpha and should not be used in production. Also it is NOT backward compatible and might change with every new commit. If you would like to use it then use it as it is.
 
 
-## License
+## License (of the C# impl.)
 
-The entire library is licensed under MIT License:
+*The entire c# library is licensed under MIT License:*
 
 Copyright (c) 2017 Andreas Näpflin
 
@@ -186,3 +188,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Inspiration
+
+I got inspired by a talk of [Andrei Alexandrescu](http://erdani.com/) about Expected\<T\> for C++ which works in a similiar way. The source code of the C++ version can be found in the open source library: [folly (github link)](https://github.com/facebook/folly).
+
+I wrote the C# version completely from scratch, without looking at the original implementation, and adjusted it for my own needs.
