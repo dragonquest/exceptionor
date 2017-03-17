@@ -2,18 +2,6 @@ using System;
 
 using Util.Exceptions;
 
-public class A
-{
-	public int CallMe(string name)
-	{
-		Console.WriteLine("My name is totally: " + name);
-
-        //throw new Exception("boom");
-        //throw new NotSupportedException("boom");
-        return 1337;
-	}
-}
-
 class Program
 {
 	static void Main(string[] args)
