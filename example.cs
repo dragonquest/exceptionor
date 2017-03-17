@@ -4,9 +4,9 @@ using Util.Exceptions;
 
 class Program
 {
-	static void Main(string[] args)
+    static void Main(string[] args)
     {
-    	// Demo usage of ExceptionOr (version 1)
+        // Demo usage of ExceptionOr (version 1)
         Console.WriteLine("Example usage 1:");
         Console.WriteLine("====================================");
         ExceptionOrDemo(-10);
